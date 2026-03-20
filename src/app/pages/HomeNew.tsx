@@ -15,12 +15,12 @@ const imgImage = "/images/inicio/evento-cultural.png";
 const imgTangoEvento1 = "/images/inicio/evento-tango/.png";
 const imgUrbino = "/images/inicio/destino-urbino.png";
 const imgGenova = "/images/inicio/destino-genova.png";
-const imgImage1 = "/images/inicio/galeria1.png";
-const imgImage2 = "/images/inicio/galeria2.png";
-const imgImage3 = "/images/inicio/galeria3.png";
-const imgImage4 = "/images/inicio/galeria4.png";
-const imgImage5 = "/images/inicio/galeria5.png";
-const imgImage6 = "/images/inicio/galeria6.png";
+const imgImage1 = "/images/nosotros/galeria1.png";
+const imgImage2 = "/images/nosotros/galeria2.png";
+const imgImage3 = "/images/nosotros/galeria3.png";
+const imgImage4 = "/images/nosotros/galeria4.png";
+const imgImage5 = "/images/nosotros/galeria5.png";
+const imgImage6 = "/images/nosotros/galeria6.png";
 
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
