@@ -31,36 +31,43 @@ export default function Nosotros() {
     {
       titulo: "Presidenza",
       portada: "/images/nosotros/presidenza1.jpg",
+      desc: "",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/presidenza${i + 1}.jpg`)
     },
     {
       titulo: "Auditorium",
       portada: "/images/nosotros/auditorium1.jpg",
+      desc: "",
       fotos: Array.from({ length: 5 }, (_, i) => `/images/nosotros/auditorium${i + 1}.jpg`)
     },
     {
       titulo: "Atrio Principale",
       portada: "/images/nosotros/atrioprincipale1.jpg",
+      desc: "",
       fotos: Array.from({ length: 7 }, (_, i) => `/images/nosotros/atrioprincipale${i + 1}.jpg`)
     },
     {
       titulo: "Segreteria",
       portada: "/images/nosotros/segreteria1.jpg",
+      desc: "",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/segreteria${i + 1}.jpg`)
     },
     {
       titulo: "Corridoio",
       portada: "/images/nosotros/corridoio1.jpg",
+      desc: "",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/corridoio${i + 1}.jpg`)
     },
     {
       titulo: "Salone D'Onore Storico",
       portada: "/images/nosotros/salonedonorestorico1.jpg",
+      desc: "",
       fotos: Array.from({ length: 4 }, (_, i) => `/images/nosotros/salonedonorestorico${i + 1}.jpg`)
     },
     {
       titulo: "Aula Scolastica",
       portada: "/images/nosotros/aulascolastica1.jpg",
+      desc: "",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/aulascolastica${i + 1}.jpg`)
     }
   ];
@@ -81,6 +88,11 @@ export default function Nosotros() {
     { src: "/images/nosotros/galeria13.png", desc: "Mesa de Trabajo de CGI Meloni, Frizzera, Grassi y Macri." },
     { src: "/images/nosotros/galeria14.png", desc: "Logotipo Institucional" },
     { src: "/images/nosotros/galeria15.png", desc: "Conmemoracion 100 aniversario, presencia de SRA Elena Faggionato de Frondizi" },
+    { src: "/images/nosotros/galeria16.jpg", desc: "Galeria 16" },
+    { src: "/images/nosotros/galeria17.jpg", desc: "Galeria 17" },
+    { src: "/images/nosotros/galeria18.jpg", desc: "Galeria 18" },
+    { src: "/images/nosotros/galeria19.jpg", desc: "Galeria 19" },
+    { src: "/images/nosotros/galeria20.jpg", desc: "Galeria 20" },
     { src: imgFrondizi1981, desc: "Registro histórico: Visita de Arturo Frondizi (1981)" }
   ];
 

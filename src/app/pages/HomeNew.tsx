@@ -411,13 +411,6 @@ export default function HomeNew() {
                 <img alt="" className="w-full h-auto object-cover rounded-2xl" src={imgImage4} />
               </div>
               
-              <div className="rounded-2xl overflow-hidden">
-                <img alt="" className="w-full h-auto object-cover rounded-2xl" src={imgImage} />
-              </div>
-              
-              <div className="rounded-2xl overflow-hidden">
-                <img alt="" className="w-full h-auto object-cover rounded-2xl" src={imgImage5} />
-              </div>
             </Masonry>
           </ResponsiveMasonry>
         </div>
