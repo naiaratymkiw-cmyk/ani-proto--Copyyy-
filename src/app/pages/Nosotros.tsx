@@ -177,7 +177,6 @@ export default function Nosotros() {
         <div className="max-w-[1400px] mx-auto px-4 lg:px-16">
           <div className="text-center mb-12">
             <h3 className="bg-clip-text bg-gradient-to-r from-[#900] to-[#666] font-bold text-4xl lg:text-[64px] mb-4" style={{ WebkitTextFillColor: "transparent" }}>Nuestra Institución</h3>
-            <p className="text-black/55 text-lg italic">El reflejo de una comunidad que celebra su cultura y su gente</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -208,6 +207,7 @@ export default function Nosotros() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col items-center mb-16 text-center">
             <h3 className="bg-clip-text bg-gradient-to-r from-[#900] to-[#666] font-bold text-4xl lg:text-[64px] mb-4" style={{ WebkitTextFillColor: "transparent" }}>Galería</h3>
+             <p className="text-black/55 text-lg italic">El reflejo de una comunidad que celebra su cultura y su gente</p>
           </div>
 
           <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}>

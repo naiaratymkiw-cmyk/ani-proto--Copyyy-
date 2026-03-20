@@ -368,9 +368,9 @@ export default function HomeNew() {
 
           {/* Button */}
           <div className="lg:col-start-2 flex justify-center lg:justify-end">
-            <a href="https://www.youtube.com/@ideaitalia6773" className="bg-white text-[#900] px-6 lg:px-4 py-3 rounded-xl font-['Inter:Medium',sans-serif] font-medium text-base lg:text-lg tracking-[-0.09px] leading-[1.45] w-[144px] text-center cursor-pointer">
+            <Link to="/informacion" className="bg-white text-[#900] px-6 lg:px-4 py-3 rounded-xl font-['Inter:Medium',sans-serif] font-medium text-base lg:text-lg tracking-[-0.09px] leading-[1.45] w-[144px] text-center cursor-pointer">
               Ver Más
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -409,6 +409,9 @@ export default function HomeNew() {
               
               <div className="rounded-2xl overflow-hidden">
                 <img alt="" className="w-full h-auto object-cover rounded-2xl" src={imgImage4} />
+              </div>
+              <div className="rounded-2xl overflow-hidden">
+                <img alt="" className="w-full h-auto object-cover rounded-2xl" src={imgImage5} />
               </div>
               
             </Masonry>
