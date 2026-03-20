@@ -30,43 +30,36 @@ export default function Nosotros() {
   const espaciosInstitucion = [
     {
       titulo: "Presidenza",
-      desc: "Despacho presidencial donde se toman las decisiones institucionales.",
       portada: "/images/nosotros/presidenza1.jpg",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/presidenza${i + 1}.jpg`)
     },
     {
       titulo: "Auditorium",
-      desc: "Espacio para conferencias y eventos culturales.",
       portada: "/images/nosotros/auditorium1.jpg",
       fotos: Array.from({ length: 5 }, (_, i) => `/images/nosotros/auditorium${i + 1}.jpg`)
     },
     {
       titulo: "Atrio Principale",
-      desc: "Hall de entrada que recibe a nuestros visitantes.",
       portada: "/images/nosotros/atrioprincipale1.jpg",
       fotos: Array.from({ length: 7 }, (_, i) => `/images/nosotros/atrioprincipale${i + 1}.jpg`)
     },
     {
       titulo: "Segreteria",
-      desc: "Oficinas administrativas y atención al socio.",
       portada: "/images/nosotros/segreteria1.jpg",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/segreteria${i + 1}.jpg`)
     },
     {
       titulo: "Corridoio",
-      desc: "Galerías que conectan los sectores y exhiben patrimonio.",
       portada: "/images/nosotros/corridoio1.jpg",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/corridoio${i + 1}.jpg`)
     },
     {
       titulo: "Salone D'Onore Storico",
-      desc: "Salón de gala conservado con mobiliario original.",
       portada: "/images/nosotros/salonedonorestorico1.jpg",
       fotos: Array.from({ length: 4 }, (_, i) => `/images/nosotros/salonedonorestorico${i + 1}.jpg`)
     },
     {
       titulo: "Aula Scolastica",
-      desc: "Espacio dedicado a la enseñanza de lengua y cultura.",
       portada: "/images/nosotros/aulascolastica1.jpg",
       fotos: Array.from({ length: 3 }, (_, i) => `/images/nosotros/aulascolastica${i + 1}.jpg`)
     }
@@ -114,15 +107,30 @@ export default function Nosotros() {
     <div className="bg-white min-h-screen w-full font-sans">
       <MobileNav />
 
-      {/* Header Desktop - Estilo Institucional */}
-      <header className="bg-[#900] hidden lg:flex items-center justify-center py-6 w-full">
-        <nav className="backdrop-blur-[35px] flex gap-10 items-center justify-center px-10 py-4 relative border border-white rounded-[40px]">
-          <Link to="/" className="text-white font-medium hover:text-white/80 transition-colors">Inicio</Link>
-          <Link to="/actividades" className="text-white font-medium hover:text-white/80 transition-colors">Actividades</Link>
-          <Link to="/informacion" className="text-white font-medium hover:text-white/80 transition-colors">Información</Link>
-          <Link to="/historia" className="text-white font-medium hover:text-white/80 transition-colors">Historia</Link>
-          <Link to="/nosotros" className="text-white font-medium hover:text-white/80 transition-colors underline underline-offset-4">Nosotros</Link>
-          <Link to="/contacto" className="bg-[#00a840] px-6 py-2 rounded-[30px] text-white font-bold hover:bg-[#008f36] transition-all">Contacto</Link>
+        {/* Desktop Header */}
+      <header className="bg-[#900] content-stretch hidden lg:flex items-center justify-center py-[24px] relative shrink-0 w-full">
+        <nav className="backdrop-blur-[35px] content-stretch flex gap-[40px] items-center justify-center px-[40px] py-[16px] relative rounded-[40px] shrink-0">
+          <div aria-hidden="true" className="absolute border border-solid border-white inset-0 pointer-events-none rounded-[40px]" />
+          <Link to="/" className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#fffefe] text-[16px] text-center tracking-[-0.08px] whitespace-nowrap">
+            <p className="leading-[1.45]">Inicio</p>
+          </Link>
+          <Link to="/actividades" className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#fffefe] text-[16px] text-center tracking-[-0.08px] whitespace-nowrap">
+            <p className="leading-[1.45]">Actividades</p>
+          </Link>
+          <Link to="/informacion" className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#fffefe] text-[16px] text-center tracking-[-0.08px] whitespace-nowrap">
+            <p className="leading-[1.45]">Información</p>
+          </Link>
+          <Link to="/historia" className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#fffefe] text-[16px] text-center tracking-[-0.08px] whitespace-nowrap">
+            <p className="leading-[1.45]">Historia</p>
+          </Link>
+          <Link to="/nosotros" className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#fffefe] text-[16px] text-center tracking-[-0.08px] whitespace-nowrap">
+            <p className="leading-[1.45]">Nosotros</p>
+          </Link>
+          <Link to="/contacto" className="bg-[#00a840] h-[39px] overflow-clip relative rounded-[30px] shrink-0 w-[117px]">
+            <div className="absolute flex flex-col font-['Inter:Bold',sans-serif] font-bold inset-[8px_13.5px_8px_12.5px] justify-center leading-[0] not-italic text-[16px] text-center text-white tracking-[-0.08px]">
+              <p className="leading-[1.45] whitespace-pre-wrap">Contacto</p>
+            </div>
+          </Link>
         </nav>
       </header>
 
