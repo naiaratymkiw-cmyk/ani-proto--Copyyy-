@@ -97,7 +97,7 @@ export default function Nosotros() {
     { src: "/images/nosotros/galeria19.jpg", desc: "Galeria 19" },
     { src: "/images/nosotros/galeria20.jpg", desc: "Galeria 20" },
     { src: "/images/nosotros/galeria21.jpeg", desc: "con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier marcelo pacifico al señor Francisco De Cunto, contador de la asociación, por su larga trayectoria profesional al servicio de nuestra institución, siempre a D’onoren, brindando su capacidad y hombría de bien" },
-    { src: "/images/nosotros/galeria22.jpeg", desc: "Denominar socios beneméritos a los señores Sergio Paoletti y Ariel Paoletti, por su gran contribución cultural - gastronómica al servicio de la institución, sintiéndose parte integrante de esta comunidad asociativa." },
+    { src: "/images/nosotros/galeria22.jpeg", desc: "Con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier Marcelo pacifico denominar socios beneméritos a los señores Sergio Paoletti y Ariel Paoletti, por su gran contribución cultural - gastronómica al servicio de la institución, sintiéndose parte integrante de esta comunidad asociativa." },
     { src: "/images/nosotros/galeria23.jpeg", desc: "Comición directiva festejando el 164 aniversario de la istitucion." },
     { src: "/images/nosotros/galeria24.jpeg", desc: "Vice presidente de la istitucion Arq. Rita Celia Mattiello" },
     { src: "/images/nosotros/galeria25.jpeg", desc: "El presidente Cavalier Marcelo Pacifico y el Segretario de la Istitucion Sres Davide Corso" },
