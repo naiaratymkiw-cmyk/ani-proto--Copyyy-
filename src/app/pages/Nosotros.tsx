@@ -20,6 +20,9 @@ interface ModalState {
 const imgHero1 = "/images/nosotros/hero.png";
 const imgFrondizi1981 = "/images/nosotros/frondizi-1981.png";
 
+// --- NUEVAS FOTOS PARA LA SECCIÓN DUPLICADA (6 imágenes) ---
+const fotosVisitaEspecial = Array.from({ length: 6 }, (_, i) => `/images/nosotros/premiacion-presidente${i + 1}.jpg`);
+
 export default function Nosotros() {
   const [modalData, setModalData] = useState<ModalState>({ 
     isOpen: false, 
@@ -93,6 +96,14 @@ export default function Nosotros() {
     { src: "/images/nosotros/galeria18.jpg", desc: "Galeria 18" },
     { src: "/images/nosotros/galeria19.jpg", desc: "Galeria 19" },
     { src: "/images/nosotros/galeria20.jpg", desc: "Galeria 20" },
+    { src: "/images/nosotros/galeria21.jpeg", desc: "con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier marcelo pacifico al señor Francisco De Cunto, contador de la asociación, por su larga trayectoria profesional al servicio de nuestra institución, siempre a D’onoren, brindando su capacidad y hombría de bien" },
+    { src: "/images/nosotros/galeria22.jpeg", desc: "Denominar socios beneméritos a los señores Sergio Paoletti y Ariel Paoletti, por su gran contribución cultural - gastronómica al servicio de la institución, sintiéndose parte integrante de esta comunidad asociativa." },
+    { src: "/images/nosotros/galeria23.jpeg", desc: "Comición directiva festejando el 164 aniversario de la istitucion." },
+    { src: "/images/nosotros/galeria24.jpeg", desc: "Vice presidente de la istitucion Arq. Rita Celia Mattiello" },
+    { src: "/images/nosotros/galeria25.jpeg", desc: "El presidente Cavalier Marcelo Pacifico y el Segretario de la Istitucion Sres Davide Corso" },
+    { src: "/images/nosotros/galeria26.jpeg", desc: "el  Presidente de la Istitucion Cavaler Marcelo Pacifico Con La segretaria Administrativa  Vicenta  De Marco" },
+    { src: "/images/nosotros/galeria27.jpeg", desc: "Entrega de pergamena  y medalla de la istitucion" },
+
     { src: imgFrondizi1981, desc: "Registro histórico: Visita de Arturo Frondizi (1981)" }
   ];
 
@@ -167,6 +178,26 @@ export default function Nosotros() {
             <div className="bg-white p-8 rounded-2xl min-h-[350px] flex flex-col justify-center gap-4">
               <h5 className="text-[#900] text-2xl lg:text-3xl font-bold leading-tight">Arturo Frondizi y Cavalier Marcello Pacificó</h5>
               <p className="text-black/70 text-lg leading-relaxed italic">"El ex presidente Arturo Frondizi junto al presidente de la Institución con motivo de la celebración de nuestro 120 aniversario (1981)."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* --- NUEVA SECCIÓN DUPLICADA: Funcionalidad de Galería (6 fotos) --- */}
+      <section className="py-8 lg:pb-16 px-4 lg:px-12 bg-white">
+        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row-reverse gap-10 items-center">
+          {/* Imagen a la derecha ahora para variar el ritmo visual, o dejala igual si preferís */}
+          <div className="w-full lg:w-[500px] h-[350px] relative rounded-2xl overflow-hidden cursor-pointer shadow-lg group" onClick={() => openModal(fotosVisitaEspecial)}>
+            <img alt="Visita Especial" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={fotosVisitaEspecial[0]} />
+            <div className="absolute bottom-4 right-4 bg-[#900]/90 text-white px-4 py-2 rounded-full flex items-center gap-2 text-xs font-bold shadow-lg">
+              <Search size={14} /> Ver galería (6)
+            </div>
+          </div>
+          <div className="flex-1 p-[2px] rounded-2xl bg-gradient-to-r from-[#f5f5f5] to-[#ffd1d1]">
+            <div className="bg-white p-8 rounded-2xl min-h-[350px] flex flex-col justify-center gap-4">
+              <h5 className="text-[#900] text-2xl lg:text-3xl font-bold leading-tight"> Entrega Placa Honoris al Presidente</h5>
+              <p className="text-black/70 text-lg leading-relaxed italic">"Con motivo del 164º aniversario de su fundación, la vicepresidenta Arq. Rita Celia Mattiello e el secretario Davide Corso entregan la placa honoris causa al presidente de la Asociación Nacional Italiana." Cavaliere della republica Italiana Marcello Pacifico"</p>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { MobileNav } from "../components/MobileNav";
 import { Footer } from "../components/Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Imágenes locales - Página Historia
@@ -279,6 +279,45 @@ export default function Historia() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isLogoExpanded, setIsLogoExpanded] = useState(false);
+  // For smooth expand/collapse of the logo explanation text we measure the
+  // real content height and animate max-height. This avoids hard-coded limits
+  // (like 1000px) which cause the content to be clipped.
+  const logoContentRef = useRef<HTMLDivElement | null>(null);
+  const [logoMaxHeight, setLogoMaxHeight] = useState<string>("140px");
+
+  const toggleLogo = () => {
+    const el = logoContentRef.current;
+    if (!el) {
+      // fallback toggle
+      setIsLogoExpanded((v) => !v);
+      setLogoMaxHeight((v) => (v === "140px" ? "none" : "140px"));
+      return;
+    }
+
+    if (!isLogoExpanded) {
+      // expand: set to actual scrollHeight to animate, then remove limit
+      const full = el.scrollHeight;
+      setLogoMaxHeight(full + "px");
+      setIsLogoExpanded(true);
+
+      const onEnd = () => {
+        // remove max-height so content can grow naturally (no clipping)
+        setLogoMaxHeight("none");
+        el.removeEventListener("transitionend", onEnd);
+      };
+      el.addEventListener("transitionend", onEnd);
+    } else {
+      // collapse: ensure we start from the current height (in case maxHeight was 'none')
+      const full = el.scrollHeight;
+      // set to explicit px then force reflow so the transition to 140px animates
+      setLogoMaxHeight(full + "px");
+      // force reflow
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      el.offsetHeight;
+      setLogoMaxHeight("140px");
+      setIsLogoExpanded(false);
+    }
+  };
   
   // Lightbox state
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -775,9 +814,10 @@ export default function Historia() {
                   </div>
                   <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[1.45] not-italic relative shrink-0 text-base lg:text-2xl text-[rgba(0,0,0,0.88)] tracking-[-0.12px] w-full">
                     <div 
+                      ref={logoContentRef}
                       className="whitespace-pre-wrap overflow-hidden transition-all duration-500 ease-in-out"
                       style={{ 
-                        maxHeight: isLogoExpanded ? '1000px' : '140px' 
+                        maxHeight: logoMaxHeight as any
                       }}
                     >
                       <p className="mb-4"><strong>🇮🇹 Versione Italiana</strong></p>
@@ -796,7 +836,7 @@ export default function Historia() {
                       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white to-transparent pointer-events-none" />
                     )}
                     <button
-                      onClick={() => setIsLogoExpanded(!isLogoExpanded)}
+                      onClick={toggleLogo}
                       className="mt-4 font-['Inter:SemiBold',sans-serif] font-semibold text-[#900] hover:text-[#b00] transition-colors text-base lg:text-xl relative z-10"
                     >
                       {isLogoExpanded ? '... Ver menos' : '... Ver más'}
