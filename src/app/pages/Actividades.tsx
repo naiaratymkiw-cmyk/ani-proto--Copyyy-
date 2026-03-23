@@ -80,7 +80,7 @@ export default function Actividades() {
                 <p className="leading-[1.45] mb-0">Aprendé el idioma de tus raíces con nuestros cursos en diversos niveles y horarios flexibles entre semana, tanto presencial como a distancia.</p>
                 <ul className="list-disc mb-0">
                   <li className="mb-0 ms-[36px]">
-                    <span className="leading-[1.45]">Turnos: 17:00 a 19:00 hs. | 19:00 a 21:00 hs.</span>
+                    <span className="leading-[1.45]">Turnos: 15:00 a 17:00 hs. | 17:00 a 19:00 hs.</span>
                   </li>
                   <li className="ms-[36px]">
                     <span className="leading-[1.45]">Inscripciones: Abiertas durante todo el mes de marzo.</span>
