@@ -104,7 +104,6 @@ export default function Nosotros() {
     { src: "/images/nosotros/galeria25.jpeg", desc: "El presidente Cavalier Marcelo Pacifico y el Segretario de la Istitucion Sres Davide Corso" },
     { src: "/images/nosotros/galeria26.jpeg", desc: "el  Presidente de la Istitucion Cavaler Marcelo Pacifico Con La segretaria Administrativa  Vicenta  De Marco" },
     { src: "/images/nosotros/galeria27.jpeg", desc: "Entrega de pergamena  y medalla de la istitucion" },
-    { src: imgFrondizi1981, desc: "Registro histórico: Visita de Arturo Frondizi (1981)" }
   ];
 
   const openModal = (images: (string | ImageData)[], index: number = 0) => {
