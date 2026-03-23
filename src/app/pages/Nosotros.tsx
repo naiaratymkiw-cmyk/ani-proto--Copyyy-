@@ -92,14 +92,15 @@ export default function Nosotros() {
     { src: "/images/nosotros/galeria14.png", desc: "Logotipo Institucional" },
     { src: "/images/nosotros/galeria15.png", desc: "Conmemoracion 100 aniversario, presencia de SRA Elena Faggionato de Frondizi" },
     { src: "/images/nosotros/galeria16.jpg", desc: "Galeria 16" },
-    { src: "/images/nosotros/galeria24.jpeg", desc: "Vice presidente de la istitucion Arq. Rita Celia Mattiello" },
-    { src: "/images/nosotros/galeria22.jpeg", desc: "Con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier Marcelo pacifico denominar socios beneméritos a los señores Sergio Paoletti y Ariel Paoletti, por su gran contribución cultural - gastronómica al servicio de la institución, sintiéndose parte integrante de esta comunidad asociativa." },
-    { src: "/images/nosotros/galeria18.jpg", desc: "Galeria 18" },
-    { src: "/images/nosotros/galeria19.jpg", desc: "Galeria 19" },
-    { src: "/images/nosotros/galeria21.jpeg", desc: "con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier marcelo pacifico al señor Francisco De Cunto, contador de la asociación, por su larga trayectoria profesional al servicio de nuestra institución, siempre a D’onoren, brindando su capacidad y hombría de bien" },
-    { src: "/images/nosotros/galeria20.jpg", desc: "Galeria 20" }, 
+     { src: "/images/nosotros/galeria20.jpg", desc: "Galeria 20" }, 
      { src: "/images/nosotros/galeria17.jpg", desc: "Galeria 17" },
+       { src: "/images/nosotros/galeria18.jpg", desc: "Galeria 18" },
+    { src: "/images/nosotros/galeria19.jpg", desc: "Galeria 19" },
+    { src: "/images/nosotros/galeria22.jpeg", desc: "Con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier Marcelo pacifico denominar socios beneméritos a los señores Sergio Paoletti y Ariel Paoletti, por su gran contribución cultural - gastronómica al servicio de la institución, sintiéndose parte integrante de esta comunidad asociativa." },
+    { src: "/images/nosotros/galeria21.jpeg", desc: "con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier marcelo pacifico al señor Francisco De Cunto, contador de la asociación, por su larga trayectoria profesional al servicio de nuestra institución, siempre a D’onoren, brindando su capacidad y hombría de bien" },
+   
     { src: "/images/nosotros/galeria23.jpeg", desc: "Comición directiva festejando el 164 aniversario de la istitucion." },
+    { src: "/images/nosotros/galeria24.jpeg", desc: "Vice presidente de la istitucion Arq. Rita Celia Mattiello" },
     { src: "/images/nosotros/galeria25.jpeg", desc: "El presidente Cavalier Marcelo Pacifico y el Segretario de la Istitucion Sres Davide Corso" },
     { src: "/images/nosotros/galeria26.jpeg", desc: "el  Presidente de la Istitucion Cavaler Marcelo Pacifico Con La segretaria Administrativa  Vicenta  De Marco" },
     { src: "/images/nosotros/galeria27.jpeg", desc: "Entrega de pergamena  y medalla de la istitucion" },
@@ -232,32 +233,49 @@ export default function Nosotros() {
         </div>
       </section>
 
-      {/* Galería Masonry */}
-      <section className="py-20 px-4 lg:px-16 w-full">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col items-center mb-16 text-center">
-            <h3 className="bg-clip-text bg-gradient-to-r from-[#900] to-[#666] font-bold text-4xl lg:text-[64px] mb-4" style={{ WebkitTextFillColor: "transparent" }}>Galería</h3>
-             <p className="text-black/55 text-lg italic">El reflejo de una comunidad que celebra su cultura y su gente</p>
+ {/* Galería Institucional - Orden Cronológico Real */}
+<section className="py-20 px-4 lg:px-16 w-full bg-white">
+  <div className="max-w-[1400px] mx-auto">
+    <div className="flex flex-col items-center mb-16 text-center">
+      <h3 className="bg-clip-text bg-gradient-to-r from-[#900] to-[#666] font-bold text-4xl lg:text-[72px] mb-4" style={{ WebkitTextFillColor: "transparent" }}>
+        Galería
+      </h3>
+      <p className="text-black/55 text-lg italic">Historia y actualidad: lo más nuevo al final de nuestra cronología</p>
+    </div>
+
+    {/* Grid de 3 columnas (Desktop) / 2 (Tablet) / 1 (Mobile) */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {galleryData.map((item, index) => (
+        <div 
+          key={index} 
+          className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 bg-gray-50" 
+          onClick={() => openModal(galleryData, index)}
+        >
+          {/* Imagen que ocupa todo el contenedor */}
+          <img 
+            src={item.src} 
+            alt={item.desc}
+            loading="lazy"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 block" 
+            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+          />
+          
+          {/* Overlay que aparece en HOVER (Desktop) y al CLICK (Mobile) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <p className="text-white text-sm font-medium leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              {item.desc}
+            </p>
           </div>
 
-          <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}>
-            <Masonry gutter="32px">
-              {galleryData.map((item, index) => (
-                <div key={index} className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md" onClick={() => openModal(galleryData, index)}>
-                  <img src={item.src} className="w-full h-auto object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-4 right-4 z-10 bg-black/30 backdrop-blur-md p-1.5 rounded-full text-white group-hover:opacity-0 transition-opacity">
-                    <Info size={18} />
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-white text-sm font-medium [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8%)]">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </Masonry>
-          </ResponsiveMasonry>
+          {/* Badge de Info para guiar al usuario en Mobile */}
+          <div className="absolute top-4 right-4 z-10 bg-black/20 backdrop-blur-md p-1.5 rounded-full text-white lg:hidden">
+            <Info size={16} />
+          </div>
         </div>
-      </section>
-
+      ))}
+    </div>
+  </div>
+</section>
       {/* Modal */}
       {modalData.isOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-4" onClick={closeModal}>
