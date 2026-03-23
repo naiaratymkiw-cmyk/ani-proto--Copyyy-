@@ -92,18 +92,17 @@ export default function Nosotros() {
     { src: "/images/nosotros/galeria14.png", desc: "Logotipo Institucional" },
     { src: "/images/nosotros/galeria15.png", desc: "Conmemoracion 100 aniversario, presencia de SRA Elena Faggionato de Frondizi" },
     { src: "/images/nosotros/galeria16.jpg", desc: "Galeria 16" },
-    { src: "/images/nosotros/galeria17.jpg", desc: "Galeria 17" },
+    { src: "/images/nosotros/galeria24.jpeg", desc: "Vice presidente de la istitucion Arq. Rita Celia Mattiello" },
+    { src: "/images/nosotros/galeria22.jpeg", desc: "Con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier Marcelo pacifico denominar socios beneméritos a los señores Sergio Paoletti y Ariel Paoletti, por su gran contribución cultural - gastronómica al servicio de la institución, sintiéndose parte integrante de esta comunidad asociativa." },
     { src: "/images/nosotros/galeria18.jpg", desc: "Galeria 18" },
     { src: "/images/nosotros/galeria19.jpg", desc: "Galeria 19" },
-    { src: "/images/nosotros/galeria20.jpg", desc: "Galeria 20" },
     { src: "/images/nosotros/galeria21.jpeg", desc: "con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier marcelo pacifico al señor Francisco De Cunto, contador de la asociación, por su larga trayectoria profesional al servicio de nuestra institución, siempre a D’onoren, brindando su capacidad y hombría de bien" },
-    { src: "/images/nosotros/galeria22.jpeg", desc: "Con Motivo del 164 aniversario de su fundacion el presidente de la istitucion  Cavalier Marcelo pacifico denominar socios beneméritos a los señores Sergio Paoletti y Ariel Paoletti, por su gran contribución cultural - gastronómica al servicio de la institución, sintiéndose parte integrante de esta comunidad asociativa." },
+    { src: "/images/nosotros/galeria20.jpg", desc: "Galeria 20" }, 
+     { src: "/images/nosotros/galeria17.jpg", desc: "Galeria 17" },
     { src: "/images/nosotros/galeria23.jpeg", desc: "Comición directiva festejando el 164 aniversario de la istitucion." },
-    { src: "/images/nosotros/galeria24.jpeg", desc: "Vice presidente de la istitucion Arq. Rita Celia Mattiello" },
     { src: "/images/nosotros/galeria25.jpeg", desc: "El presidente Cavalier Marcelo Pacifico y el Segretario de la Istitucion Sres Davide Corso" },
     { src: "/images/nosotros/galeria26.jpeg", desc: "el  Presidente de la Istitucion Cavaler Marcelo Pacifico Con La segretaria Administrativa  Vicenta  De Marco" },
     { src: "/images/nosotros/galeria27.jpeg", desc: "Entrega de pergamena  y medalla de la istitucion" },
-
     { src: imgFrondizi1981, desc: "Registro histórico: Visita de Arturo Frondizi (1981)" }
   ];
 
@@ -196,8 +195,8 @@ export default function Nosotros() {
           </div>
           <div className="flex-1 p-[2px] rounded-2xl bg-gradient-to-r from-[#f5f5f5] to-[#ffd1d1]">
             <div className="bg-white p-8 rounded-2xl min-h-[350px] flex flex-col justify-center gap-4">
-              <h5 className="text-[#900] text-2xl lg:text-3xl font-bold leading-tight"> Entrega Placa Honoris al Presidente</h5>
-              <p className="text-black/70 text-lg leading-relaxed italic">"Con motivo del 164º aniversario de su fundación, la vicepresidenta Arq. Rita Celia Mattiello e el secretario Davide Corso entregan la placa honoris causa al presidente de la Asociación Nacional Italiana." Cavaliere della republica Italiana Marcello Pacifico"</p>
+              <h5 className="text-[#900] text-2xl lg:text-3xl font-bold leading-tight"> Entrega Placa Honoris Causa</h5>
+              <p className="text-black/70 text-lg leading-relaxed italic">"Con motivo del 164º aniversario de su fundación, la vicepresidente Arq. Rita Celia Mattiello e el secretario Davide Corso entregan la placa honoris causa al presidente de la Asociación Nacional Italiana." Cavaliere della republica Italiana Marcello Pacifico"</p>
             </div>
           </div>
         </div>
