@@ -87,7 +87,7 @@ export default function Nosotros() {
     { src: "/images/nosotros/galeria9.png", desc: "Homenaje al Capitan de fregata Pedro Edgardo Giachino 1* caido en Malvina de sangre Italiana" },
     { src: "/images/nosotros/galeria10.png", desc: "Homenaje al Capitan de fregata Pedro Edgardo Giachino 1* caido en Malvina de sangre Italiana" },
     { src: "/images/nosotros/galeria11.png", desc: "Concierto de cuerda Maestro Ardolino" },
-    { src: "/images/nosotros/galeria12.png", desc: "acto de Entronacion de la virjen de Lujan" },
+    { src: "/images/nosotros/galeria12.png", desc: "acto de Entronacion de la virgen de Lujan" },
     { src: "/images/nosotros/galeria13.png", desc: "Mesa de Trabajo de CGI Meloni, Frizzera, Grassi y Macri." },
     { src: "/images/nosotros/galeria14.png", desc: "Logotipo Institucional" },
     { src: "/images/nosotros/galeria15.png", desc: "Conmemoracion 100 aniversario, presencia de SRA Elena Faggionato de Frondizi" },
