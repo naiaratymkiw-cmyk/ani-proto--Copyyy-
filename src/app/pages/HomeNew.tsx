@@ -29,14 +29,12 @@ export default function HomeNew() {
 
   return (
     <div className="min-h-screen bg-white w-full">
-      {/* 165th Anniversary Banner - GOLD - DISMISSIBLE */}
       {bannerVisible && (
         <div className="bg-gradient-to-r from-[#AE8625] via-[#F7EF8A] via-[#D2AC47] to-[#EDC967] py-3 lg:py-4 w-full sticky top-0 z-[60] shadow-lg border-b-2 border-[#AE8625]">
           <div className="flex items-center justify-center px-4 relative">
             <p className="font-['Inter:Bold',sans-serif] font-bold text-[#900] text-sm lg:text-lg text-center tracking-[-0.02em]">
               🎊 ¡Celebramos 165 años! • 25 de Marzo, 1861-2026 🎊
             </p>
-            {/* Close Button */}
             <button
               onClick={() => setBannerVisible(false)}
               className="absolute right-2 lg:right-4 p-1 hover:bg-[#AE8625] hover:bg-opacity-20 rounded-full transition-all duration-200"
